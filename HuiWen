@@ -1,0 +1,25 @@
+//回文数
+
+package HandWritting;
+import java.util.Scanner;
+
+public class Meituan1{
+
+	public static void main(String[] args) throws Exception {
+		Scanner scan = new Scanner(System.in);
+		String arr = new String();
+		arr=scan.nextLine();
+		int length = arr.length();
+		int len = arr.length()/2;
+		if(len==0){
+			System.out.println("false");
+		}
+		for(int i=0;i<len;i++){
+			if(arr.charAt(i)!=arr.charAt(arr.length()-i-1)){
+			System.out.println("false");
+		}
+	}
+		System.out.print("true");
+	}
+}
+	
