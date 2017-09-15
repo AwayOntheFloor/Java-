@@ -1,0 +1,28 @@
+package HandWritting;
+/*
+ * 跳台阶问题？m阶楼梯，一次最多可跳4次，有多少种可能？（本来问n次，然后直接举例说4次）手写实现代码？
+ */
+import java.util.Scanner;
+
+public class taijie {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		System.out.println(result(n));
+
+	}
+	public static int result(int m){
+		if(m==1){//当只有一阶台阶时有1种走法
+			return 1;
+		}else if(m==2){//当只有2阶台阶时有2种走法
+			return 2;
+		}else if(m==3){//当只有3阶台阶时有4种走法
+			return 4;
+		}else if(m==4){////当只有4阶台阶时有8种走法
+			return 8;
+		}else{//走前4阶有8种走法，剩下的有result（m-4）种走法。递归
+			return 8+result(m-4);
+		}
+	}
+}
