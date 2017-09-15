@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>饼图demo</title>
+
+</head>
+
+<body>
+	<script type="text/javascript">
+		var a = 43543525;
+		function thousand(a){
+			var arr = new Array();
+			a=a+"";
+			var result = "";
+     		arr=a.split("");
+     		var count = 0;
+			for(var i = arr.length-1;i>=0;i--){
+				if(count<3){
+					result =arr[i] + result  ;
+					count ++;
+				}else{
+					result = arr[i]+","+result  ;
+					count = 1;
+				}
+			}
+			alert(result);
+		}
+		thousand(a);
+	</script>
+</body>
+
+</html>
+
+<html>
+	<head>
+		
+	</head>
+<body>
+
+</body>
+</html>
